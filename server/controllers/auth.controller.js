@@ -3,6 +3,7 @@ import { hashPassword, comparePassword } from "../services/auth.service.js";
 import {
   generateAccessToken,
   generateRefreshToken,
+  verifyRefreshToken
 } from "../services/auth.service.js";
 
 const cookiesAccessOptions = {
@@ -76,3 +77,5 @@ export const login = async (req, res) => {
     res.status(500).json(error);
   }
 };
+
+

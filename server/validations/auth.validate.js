@@ -11,3 +11,11 @@ export const loginSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().required().min(6).max(20),
 });
+
+// for user controllers
+export const ProfileSchema = Joi.object({
+  bio: Joi.string().optional().max(300).allow(""),
+  role: Joi.string().valid("student", "teacher", "admin").required(),
+});
+
+
