@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react'
-import { BrowserRouter,Router, Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from "react";
+import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import { useLocation } from "react-router-dom";
+import Landing from "./components/Landing.jsx";
 
 const App = () => {
+  const location = useLocation();
+  // console.log(location.pathname);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<div className='text-3xl font-bold'>Home Page</div>} />
-        <Route path="/about" element={<div className='text-3xl font-bold'>About Page</div>} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
-
-export default App
+    <div>
+      <Layout />
+    </div>
+  );
+};
+export default App;
