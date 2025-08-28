@@ -11,6 +11,7 @@ import {
 import "./index.css";
 import App from "./App.jsx";
 import Landing from "./components/Landing.jsx";
+import Auth from "./components/Auth.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     path: "/home",
     element: <App />,
   },
+  {
+    path: "/auth",
+    element: <Auth />,
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
